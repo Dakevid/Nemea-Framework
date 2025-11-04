@@ -34,18 +34,19 @@ dependencies = []
 
 [project.optional-dependencies]
 test = [
-  "pytest",
-  "pytest-cov",
-  "pytest-forked",
+    "pytest",
+    "pytest-cov",
+    "pytest-forked",
 ]
 docs = [
-  "sphinx",
-  "sphinx-rtd-theme",
-  "sphinx-pyproject",
+    "sphinx",
+    "sphinx-rtd-theme",
+    "sphinx-pyproject"
 ]
 
 [project.urls]
 Homepage = "https://github.com/CESNET/Nemea-Framework"
+
 
 [tool.setuptools]
 package-dir = { "" = "src" }
@@ -64,8 +65,6 @@ sources = [
   "src/fields.c"
 ]
 libraries = ["trap", "unirec"]
-include-dirs = ["/usr/include", "/usr/local/include"]
-library-dirs = ["/usr/lib", "/usr/local/lib"]
 
 
 [tool.pytest.ini_options]

@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=61.0", "wheel"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -9,36 +9,36 @@ description = "Common Python modules and methods of the NEMEA system."
 readme = {text = "The module contains methods for creation and submission of incident reports in IDEA format.", content-type = "text/plain"}
 license = {text = "BSD"}
 authors = [
-  {name = "Vaclav Bartos, CESNET", email = "bartos@cesnet.cz"},
+    {name = "Vaclav Bartos, CESNET", email = "bartos@cesnet.cz"},
 ]
 maintainers = [
-  {name = "Tomas Cejka", email = "cejkat@cesnet.cz"},
+    {name = "Tomas Cejka", email = "cejkat@cesnet.cz"},
 ]
 requires-python = ">=3.6"
 dependencies = [
-  "pynspect",
-  "idea-format",
-  "PyYAML",
-  "ply",
-  "jinja2",
-  "redis",
+    "pynspect",
+    "idea-format",
+    "PyYAML",
+    "ply",
+    "jinja2",
+    "redis",
 ]
 classifiers = [
-  "Development Status :: 4 - Beta",
-  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-  "Operating System :: POSIX",
-  "Programming Language :: C",
-  "Programming Language :: Python",
-  "Programming Language :: Python :: 3",
-  "Topic :: Software Development :: Libraries",
-  "Topic :: System :: Networking :: Monitoring",
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: POSIX",
+    "Programming Language :: C",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: System :: Networking :: Monitoring",
 ]
 
 
 [project.optional-dependencies]
 test = [
-  "pytest",
-  "pytest-cov",
+    "pytest",
+    "pytest-cov",
 ]
 
 
@@ -50,9 +50,6 @@ Homepage = "https://github.com/CESNET/Nemea-Framework"
 py-modules = ["report2idea", "ip_prefix_search"]
 packages = ["reporter_config", "reporter_config.actions"]
 
-[tool.setuptools.extension]
-include-dirs = ["/usr/include", "/usr/local/include"]
-library-dirs = ["/usr/lib", "/usr/local/lib"]
 
 [tool.pytest.ini_options]
 testpaths = ["test"]
