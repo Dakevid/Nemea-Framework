@@ -24,7 +24,9 @@ jobs:
     - name: make
       run: make -j10
     - name: install
-      run: sudo make install
+      run: |
+        sudo make install
+        sudo ldconfig
     - name: install pytrap
       run: (cd pytrap && make coverage; sudo pip install .;)
     - name: pycommon tests
