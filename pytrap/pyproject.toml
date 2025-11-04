@@ -17,6 +17,7 @@ license = { text = "BSD" }
 requires-python = ">=3.8"
 classifiers = [
   "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
   "Operating System :: POSIX :: Linux",
   "Programming Language :: C",
   "Programming Language :: Python :: 3",
@@ -33,20 +34,19 @@ dependencies = []
 
 [project.optional-dependencies]
 test = [
-    "pytest",
-    "pytest-cov",
-    "pytest-forked",
+  "pytest",
+  "pytest-cov",
+  "pytest-forked",
 ]
 docs = [
-    "sphinx",
-    "sphinx-rtd-theme",
-    "sphinx-pyproject"
+  "sphinx",
+  "sphinx-rtd-theme",
+  "sphinx-pyproject",
 ]
 
 [project.urls]
 Homepage = "https://github.com/CESNET/Nemea-Framework"
 
-# Configure setuptools to find packages and handle C extensions
 [tool.setuptools]
 package-dir = { "" = "src" }
 
@@ -64,6 +64,8 @@ sources = [
   "src/fields.c"
 ]
 libraries = ["trap", "unirec"]
+include-dirs = ["/usr/include", "/usr/local/include"]
+library-dirs = ["/usr/lib", "/usr/local/lib"]
 
 
 [tool.pytest.ini_options]
